@@ -2,14 +2,14 @@ import { AnyAction } from "redux";
 
 import * as types from "../actions/cats/actionTypes";
 
-export interface CatState {
-  data?: string;
+export interface NameState {
+  name?: string;
   id?: number;
 }
 
-export const initialState: CatState = {};
+export const initialState: NameState = {};
 
-const catReducer = (state = initialState, action: AnyAction): CatState => {
+const nameReducer = (state = initialState, action: AnyAction): NameState => {
   switch (action.type) {
     case types.CHANGE_ID: {
       return {
@@ -17,10 +17,10 @@ const catReducer = (state = initialState, action: AnyAction): CatState => {
         id: action.id,
       };
     }
-    case types.GET_CAT_IMAGE_SUCCESS: {
+    case types.GET_CAT_NAME_SUCCESS: {
       return {
         ...state,
-        data: action.url,
+        name: action.name,
       };
     }
     default: {
@@ -29,4 +29,4 @@ const catReducer = (state = initialState, action: AnyAction): CatState => {
   }
 };
 
-export default catReducer;
+export default nameReducer;

@@ -13,7 +13,7 @@ const NAMES = [
   "Simba",
 ];
 
-export default function getCatImage() {
+export default function getCatName() {
   return {
     type: types.GET_CAT_NAME_SUCCESS,
     name: NAMES[Math.floor(Math.random() * 10)],

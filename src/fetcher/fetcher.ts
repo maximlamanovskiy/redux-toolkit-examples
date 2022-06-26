@@ -21,12 +21,10 @@ export function getJson(url: string) {
 export function getImage(url: string) {
   return fetch(url, {
     method: "GET",
+    cache: "no-store",
   })
     .then((response: Response) => checkStatus(response))
-    .then((response: Response) => {
-      console.log(response.blob);
-      console.log(response.body);
-      return response.body;
-    })
+    .then((response: Response) => response.blob())
+    .then((blob: Blob) => URL.createObjectURL(blob))
     .catch((error) => error);
 }
