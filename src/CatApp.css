@@ -1,0 +1,27 @@
+.cat-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cat-container {
+  width: 100vw;
+  height: calc(99vh - 210px);
+}
+
+.cat-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cat-buttons {
+  margin-top: 1vh;
+  display: flex;
+  gap: 50px;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 40px;
+}
