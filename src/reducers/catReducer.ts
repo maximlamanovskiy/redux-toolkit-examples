@@ -11,12 +11,6 @@ export const initialState: CatState = {};
 
 const catReducer = (state = initialState, action: AnyAction): CatState => {
   switch (action.type) {
-    case types.CHANGE_ID: {
-      return {
-        ...state,
-        id: action.id,
-      };
-    }
     case types.GET_CAT_IMAGE_SUCCESS: {
       return {
         ...state,

@@ -1,6 +1,6 @@
 import { AnyAction } from "redux";
 
-import * as types from "../actions/cats/actionTypes";
+import * as types from "../actions/name/actionTypes";
 
 export interface NameState {
   name?: string;
@@ -11,13 +11,7 @@ export const initialState: NameState = {};
 
 const nameReducer = (state = initialState, action: AnyAction): NameState => {
   switch (action.type) {
-    case types.CHANGE_ID: {
-      return {
-        ...state,
-        id: action.id,
-      };
-    }
-    case types.GET_CAT_NAME_SUCCESS: {
+    case types.GET_NAME: {
       return {
         ...state,
         name: action.name,

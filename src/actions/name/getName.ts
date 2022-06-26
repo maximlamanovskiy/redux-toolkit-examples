@@ -13,9 +13,9 @@ const NAMES = [
   "Simba",
 ];
 
-export default function getCatName() {
+export default function getName() {
   return {
-    type: types.GET_CAT_NAME_SUCCESS,
+    type: types.GET_NAME,
     name: NAMES[Math.floor(Math.random() * 10)],
   };
 }
